@@ -14,7 +14,8 @@ Software Engineering - Activity 2
 <br>
 
 <div align=center>
-
+<div align=left><b>v0.1.0 Demo</b>:</div>
+    
 https://github.com/Jed556/Tindahan-System/assets/84989546/b420e1d4-ebf6-4956-959e-57977f41390c
 
 </div>
