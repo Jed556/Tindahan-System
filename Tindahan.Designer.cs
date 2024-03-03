@@ -81,7 +81,6 @@
             this.RD_Student.Name = "RD_Student";
             this.RD_Student.Size = new System.Drawing.Size(91, 17);
             this.RD_Student.TabIndex = 4;
-            this.RD_Student.TabStop = true;
             this.RD_Student.Tag = "10";
             this.RD_Student.Text = "Student - 10%";
             this.RD_Student.UseVisualStyleBackColor = true;
@@ -93,7 +92,6 @@
             this.RD_Senior.Name = "RD_Senior";
             this.RD_Senior.Size = new System.Drawing.Size(84, 17);
             this.RD_Senior.TabIndex = 5;
-            this.RD_Senior.TabStop = true;
             this.RD_Senior.Tag = "20";
             this.RD_Senior.Text = "Senior - 20%";
             this.RD_Senior.UseVisualStyleBackColor = true;
@@ -105,7 +103,6 @@
             this.RD_PWD.Name = "RD_PWD";
             this.RD_PWD.Size = new System.Drawing.Size(80, 17);
             this.RD_PWD.TabIndex = 6;
-            this.RD_PWD.TabStop = true;
             this.RD_PWD.Tag = "20";
             this.RD_PWD.Text = "PWD - 20%";
             this.RD_PWD.UseVisualStyleBackColor = true;
@@ -113,6 +110,7 @@
             // RD_Regular
             // 
             this.RD_Regular.AutoSize = true;
+            this.RD_Regular.Checked = true;
             this.RD_Regular.Location = new System.Drawing.Point(23, 133);
             this.RD_Regular.Name = "RD_Regular";
             this.RD_Regular.Size = new System.Drawing.Size(85, 17);
