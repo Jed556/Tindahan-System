@@ -11,41 +11,41 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Activity2
 {
-    public partial class Main : Form
+    public partial class F_Main : Form
     {
-        public Main()
+        public F_Main()
         {
             InitializeComponent();
         }
 
-        private void bt_Buy_Click(object sender, EventArgs e)
+        private void BT_Buy_Click(object sender, EventArgs e)
         {
             double Subtotal = 0, Discount = 0, Total = 0;
 
-            foreach (Control control in gb_Menu.Controls)
+            foreach (Control control in GB_Menu.Controls)
             {
                 if (control is System.Windows.Forms.CheckBox checkBox)
                 {
                     if (checkBox.Checked)
                     {
                         Subtotal += double.Parse(checkBox.Tag.ToString());
-                    }
+        }
                 }
             }
 
             Subtotal +=
-                double.Parse(lb_Rice.Tag.ToString()) * double.Parse(num_Rice.Value.ToString()) +
-                double.Parse(lb_Gravy.Tag.ToString()) * double.Parse(num_Gravy.Value.ToString()) +
-                double.Parse(lb_Ketchup.Tag.ToString()) * double.Parse(num_Ketchup.Value.ToString());
+                double.Parse(LB_Rice.Tag.ToString()) * double.Parse(NM_Rice.Value.ToString()) +
+                double.Parse(LB_Gravy.Tag.ToString()) * double.Parse(NM_Gravy.Value.ToString()) +
+                double.Parse(LB_Ketchup.Tag.ToString()) * double.Parse(NM_Ketchup.Value.ToString());
             
-            tb_Subtotal.Text = Subtotal.ToString();
+            TB_Subtotal.Text = Subtotal.ToString();
 
-            foreach (Control control in gb_Discount.Controls)
+            foreach (Control control in GB_Discount.Controls)
             {
                 if (control is System.Windows.Forms.RadioButton radioButton)
                 {
                     if (radioButton.Checked)
-                    {
+        {
                         Discount = Subtotal * (double.Parse(radioButton.Tag.ToString()) / 100);
                         Total = Subtotal - Discount;
                         break;
@@ -54,8 +54,8 @@ namespace Activity2
             }
 
 
-            tb_Discount.Text = Discount.ToString();
-            tb_Total.Text = Total.ToString();
+            TB_Discount.Text = Discount.ToString();
+            TB_Total.Text = Total.ToString();
         }
     }
 }
