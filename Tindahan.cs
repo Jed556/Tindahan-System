@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,10 @@ namespace Activity2
         {
             double Subtotal = 0, Discount = 0, Total = 0;
 
+            NumberFormatInfo precision = new NumberFormatInfo();
+            precision.NumberDecimalDigits = 2;
+
+
             foreach (Control control in GB_Menu.Controls)
             {
                 if (control is System.Windows.Forms.CheckBox checkBox)
@@ -37,8 +42,6 @@ namespace Activity2
                 double.Parse(LB_Rice.Tag.ToString()) * double.Parse(NM_Rice.Value.ToString()) +
                 double.Parse(LB_Gravy.Tag.ToString()) * double.Parse(NM_Gravy.Value.ToString()) +
                 double.Parse(LB_Ketchup.Tag.ToString()) * double.Parse(NM_Ketchup.Value.ToString());
-            
-            TB_Subtotal.Text = Subtotal.ToString();
 
             foreach (Control control in GB_Discount.Controls)
             {
@@ -53,9 +56,14 @@ namespace Activity2
                 }
             }
 
+            TB_Subtotal.Text = "₱" + Subtotal.ToString("N", precision);
+            TB_Discount.Text = "₱" + Discount.ToString("N", precision);
+            TB_Total.Text = "₱" + Total.ToString("N", precision);
+        }
 
-            TB_Discount.Text = Discount.ToString();
-            TB_Total.Text = Total.ToString();
+        private void BT_Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

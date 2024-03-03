@@ -67,6 +67,7 @@
             this.TB_Total = new System.Windows.Forms.TextBox();
             this.TB_Discount = new System.Windows.Forms.TextBox();
             this.LB_Discount = new System.Windows.Forms.Label();
+            this.BT_Close = new System.Windows.Forms.Button();
             this.GB_Discount.SuspendLayout();
             this.GB_Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NM_Rice)).BeginInit();
@@ -476,7 +477,7 @@
             this.TB_Subtotal.Name = "TB_Subtotal";
             this.TB_Subtotal.Size = new System.Drawing.Size(80, 24);
             this.TB_Subtotal.TabIndex = 19;
-            this.TB_Subtotal.Text = "0.00";
+            this.TB_Subtotal.Text = "₱0.00";
             // 
             // TB_Total
             // 
@@ -487,7 +488,7 @@
             this.TB_Total.Name = "TB_Total";
             this.TB_Total.Size = new System.Drawing.Size(80, 24);
             this.TB_Total.TabIndex = 20;
-            this.TB_Total.Text = "0.00";
+            this.TB_Total.Text = "₱0.00";
             // 
             // TB_Discount
             // 
@@ -498,7 +499,7 @@
             this.TB_Discount.Name = "TB_Discount";
             this.TB_Discount.Size = new System.Drawing.Size(80, 24);
             this.TB_Discount.TabIndex = 22;
-            this.TB_Discount.Text = "0.00";
+            this.TB_Discount.Text = "₱0.00";
             // 
             // LB_Discount
             // 
@@ -510,11 +511,24 @@
             this.LB_Discount.TabIndex = 21;
             this.LB_Discount.Text = "Discount";
             // 
+            // BT_Close
+            // 
+            this.BT_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.BT_Close.Location = new System.Drawing.Point(801, 285);
+            this.BT_Close.Name = "BT_Close";
+            this.BT_Close.Size = new System.Drawing.Size(131, 37);
+            this.BT_Close.TabIndex = 23;
+            this.BT_Close.Text = "Close";
+            this.BT_Close.UseVisualStyleBackColor = true;
+            this.BT_Close.Click += new System.EventHandler(this.BT_Close_Click);
+            // 
             // F_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 361);
+            this.ControlBox = false;
+            this.Controls.Add(this.BT_Close);
             this.Controls.Add(this.TB_Discount);
             this.Controls.Add(this.LB_Discount);
             this.Controls.Add(this.TB_Total);
@@ -585,6 +599,7 @@
         private System.Windows.Forms.TextBox TB_Total;
         private System.Windows.Forms.TextBox TB_Discount;
         private System.Windows.Forms.Label LB_Discount;
+        private System.Windows.Forms.Button BT_Close;
     }
 }
 
