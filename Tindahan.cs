@@ -46,13 +46,15 @@ namespace Activity2
                 {
                     if (radioButton.Checked)
                     {
-                        Total = Subtotal - (Subtotal * (double.Parse(radioButton.Tag.ToString()) / 100));
+                        Discount = Subtotal * (double.Parse(radioButton.Tag.ToString()) / 100);
+                        Total = Subtotal - Discount;
+                        break;
                     }
                 }
             }
 
 
-            tb_Discount.Text = (Subtotal - Total).ToString();
+            tb_Discount.Text = Discount.ToString();
             tb_Total.Text = Total.ToString();
         }
     }
